@@ -14,15 +14,13 @@ if __name__ == "__main__":
 
     # load input data
     data = load_iris()
-    X = data.data
-    y = data.target
 
     # fit classifier
     classifier = SimpleAutoMLClassifier(verbose=True)
-    classifier.fit(X, y)
+    classifier.fit(data.data, data.target)
     
     # predict on test vector
-    result = classifier.predict(X[:1])
+    result = classifier.predict(data.data[:1])
     print(f"\nResult prediction: {result}")
 
     # look at the selected model
