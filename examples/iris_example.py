@@ -1,4 +1,4 @@
-""" """
+"""An example module on `iris` dataset"""
 
 import os
 import sys
@@ -7,7 +7,7 @@ from sklearn.datasets import load_iris
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
-from automl.classification import SimpleAutoMLClassifier
+from simple_automl.classification import SimpleAutoMLClassifier
 
 
 if __name__ == "__main__":
@@ -17,11 +17,15 @@ if __name__ == "__main__":
 
     # fit classifier
     classifier = SimpleAutoMLClassifier(verbose=True)
+    print("Test models and count metrics:")
     classifier.fit(data.data, data.target)
-    
-    # predict on test vector
-    result = classifier.predict(data.data[:1])
-    print(f"\nResult prediction: {result}")
 
     # look at the selected model
-    print(f"Selected model: {classifier.model}")
+    print(f"\nSelected model: {classifier.model}")
+    
+    # predict on test data
+    test_data = data.data[:1]
+    result = classifier.predict(test_data)
+    print(f"\nPredict on input data: {test_data}")
+    print(f"Result prediction: {result}")
+
