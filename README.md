@@ -20,6 +20,8 @@ pip install -r requirements.txt
 Fit base classifier:
 
 ```python
+from simple_automl.classification import SimpleAutoMLClassifier
+
 classifier = SimpleAutoMLClassifier()
 classifier.fit(X_train, y_train)
 ```
