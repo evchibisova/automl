@@ -17,7 +17,7 @@ pip install -r requirements.txt
 
 ## Examples
 
-Run `python examples/iris_example.py` for seen simple example on `iris` dataset.
+Run `python examples/iris_example.py` to see simple example on `iris` dataset.
 
 
 ## Basic usage
