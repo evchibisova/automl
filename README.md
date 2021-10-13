@@ -15,9 +15,14 @@ source automl-env/bin/activate
 pip install -r requirements.txt
 ```
 
-## Quickstart
+## Examples
 
-Fit base classifier:
+Run `python examples/iris_example.py` for seen simple example on `iris` dataset.
+
+
+## Basic usage
+
+Fit base classifier using input feature matrix and target:
 
 ```python
 from simple_automl.classification import SimpleAutoMLClassifier
@@ -43,9 +48,3 @@ For seeing metrics for each tested model, use `verbose` flag:
 ```python
 classifier = SimpleAutoMLClassifier(metric="accuracy", verbose=True)
 ```
-
-## Examples
-
-See more usage examples in [./examples](https://github.com/evchibisova/automl/tree/feature-simple-automl-classifier/examples) directory. 
-
-Run example on `iris` dataset with `python examples/iris_example.py`.
